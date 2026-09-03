@@ -228,38 +228,119 @@ body {
   color: #ad493c;
 }
 .path-card {
+  position: relative;
+  display: grid;
+  min-height: 39rem;
+  overflow: hidden;
+  border: 1px solid rgba(159, 126, 70, 0.24);
+  border-radius: 2rem;
+  text-align: left;
+  box-shadow: 0 20px 50px rgba(82, 79, 61, 0.09);
+}
+.path-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(180deg, transparent 55%, rgba(25, 48, 42, 0.1));
+}
+.path-copy {
+  position: relative;
+  z-index: 4;
+  width: 63%;
+  padding: 2.25rem 0 2rem 2.25rem;
+}
+.path-eyebrow {
   display: flex;
   align-items: center;
-  gap: 1.25rem;
-  min-height: 9rem;
-  border: 1px solid rgba(159, 126, 70, 0.24);
-  border-radius: 1.5rem;
-  padding: 1.5rem;
-  text-align: left;
-  box-shadow: 0 15px 35px rgba(82, 79, 61, 0.07);
+  gap: 0.75rem;
 }
-.path-card > span {
+.path-eyebrow > span {
+  display: grid;
+  width: 2.6rem;
+  height: 2.6rem;
+  place-items: center;
+  border: 1px solid currentColor;
+  border-radius: 50%;
   font-family: var(--font-display), serif;
-  font-size: 3.5rem;
+  font-size: 1.25rem;
 }
-.path-card p {
+.path-eyebrow p {
   font-size: 0.67rem;
   font-weight: 600;
   letter-spacing: 0.3em;
 }
 .path-card h3 {
-  margin-top: 0.25rem;
+  margin-top: 1.5rem;
   font-family: var(--font-display), serif;
-  font-size: 1.65rem;
+  font-size: clamp(2.25rem, 4vw, 3.25rem);
+  font-weight: 600;
+  line-height: 0.98;
+}
+.path-description {
+  margin-top: 1.25rem;
+  font-size: 0.875rem;
+  line-height: 1.75;
+  opacity: 0.78;
+}
+.path-traits {
+  display: grid;
+  gap: 0.6rem;
+  margin-top: 1.5rem;
+}
+.path-traits li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 0.55rem;
+  font-size: 0.75rem;
+  border-color: color-mix(in srgb, currentColor 18%, transparent);
+}
+.path-traits strong {
   font-weight: 600;
 }
+.path-role {
+  margin-top: 1.4rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.04em;
+  opacity: 0.72;
+}
+.path-role strong {
+  font-weight: 600;
+}
+.path-character {
+  position: absolute;
+  right: -7%;
+  bottom: -1%;
+  z-index: 2;
+  width: 65%;
+  height: 92%;
+  filter: drop-shadow(0 16px 22px rgba(29, 46, 42, 0.16));
+}
 .path-immortal {
-  background: linear-gradient(135deg, #f9f5e9, #dceadd);
+  background:
+    radial-gradient(
+      circle at 85% 25%,
+      rgba(155, 218, 237, 0.55),
+      transparent 32%
+    ),
+    linear-gradient(145deg, #f9f7ed 15%, #d7ebea);
   color: #365b4e;
 }
 .path-demon {
-  background: linear-gradient(135deg, #fff5e8, #f2d2c5);
+  background:
+    radial-gradient(
+      circle at 85% 24%,
+      rgba(212, 86, 69, 0.28),
+      transparent 34%
+    ),
+    linear-gradient(145deg, #fff7ea 15%, #efd5cb);
   color: #983f34;
+}
+.path-character-demon {
+  right: -9%;
 }
 .feature-card {
   background: linear-gradient(
@@ -335,6 +416,21 @@ body {
   }
   .realm-card {
     padding: 0.75rem;
+  }
+  .path-card {
+    min-height: 56rem;
+    border-radius: 1.5rem;
+  }
+  .path-copy {
+    width: 100%;
+    padding: 1.6rem;
+  }
+  .path-character,
+  .path-character-demon {
+    right: 3%;
+    bottom: -1%;
+    width: 94%;
+    height: 57%;
   }
 }
 @media (prefers-reduced-motion: reduce) {

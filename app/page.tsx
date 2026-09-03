@@ -251,19 +251,84 @@ export default function Home() {
           Không có con đường đúng tuyệt đối. Lựa chọn công pháp, kết giao hoặc
           đối đầu các thế lực, rồi gánh lấy nhân quả qua từng lần trùng sinh.
         </p>
-        <div className="mx-auto mt-14 grid max-w-4xl gap-4 sm:grid-cols-2">
+        <div className="mx-auto mt-14 grid max-w-6xl gap-6 lg:grid-cols-2">
           <article className="path-card path-immortal">
-            <span>仙</span>
-            <div>
-              <p>TIÊN ĐẠO</p>
-              <h3>Thuận thiên tu hành</h3>
+            <div className="path-copy">
+              <div className="path-eyebrow">
+                <span>仙</span>
+                <p>TIÊN TU · PHONG HỆ</p>
+              </div>
+              <h3>Thân pháp tựa lưu vân</h3>
+              <p className="path-description">
+                Thuận theo linh khí trời đất, lấy tốc độ làm kiếm, lấy thân pháp
+                làm giáp. Tiên Tu bền bỉ trong giao tranh và luôn chiếm thế chủ
+                động.
+              </p>
+              <ul className="path-traits" aria-label="Ưu điểm Tiên Tu">
+                <li>
+                  <span>Tốc độ</span>
+                  <strong>Xuất chúng</strong>
+                </li>
+                <li>
+                  <span>Né đòn</span>
+                  <strong>Linh hoạt</strong>
+                </li>
+                <li>
+                  <span>Sinh lực</span>
+                  <strong>Dồi dào</strong>
+                </li>
+              </ul>
+              <p className="path-role">
+                Lối chơi <strong>Cơ động · Sinh tồn</strong>
+              </p>
+            </div>
+            <div className="path-character path-character-immortal">
+              <Image
+                src="/images/tien-tu-character.png"
+                alt="Nữ Tiên Tu với pháp khí và hồ điệp"
+                fill
+                sizes="(max-width: 1024px) 80vw, 36vw"
+                className="object-contain object-bottom"
+              />
             </div>
           </article>
           <article className="path-card path-demon">
-            <span>魔</span>
-            <div>
-              <p>MA ĐẠO</p>
-              <h3>Nghịch thiên cải mệnh</h3>
+            <div className="path-copy">
+              <div className="path-eyebrow">
+                <span>魔</span>
+                <p>MA TU · HỎA HỆ</p>
+              </div>
+              <h3>Ma diễm phá càn khôn</h3>
+              <p className="path-description">
+                Nghịch thiên đoạt mệnh, dùng ma khí áp đảo chiến trường. Ma Tu
+                tung đòn quyết liệt, quét sạch quần địch và khóa chặt mục tiêu.
+              </p>
+              <ul className="path-traits" aria-label="Ưu điểm Ma Tu">
+                <li>
+                  <span>Sát thương</span>
+                  <strong>Bạo phát</strong>
+                </li>
+                <li>
+                  <span>Diện rộng</span>
+                  <strong>Áp đảo</strong>
+                </li>
+                <li>
+                  <span>Khống chế</span>
+                  <strong>Mạnh mẽ</strong>
+                </li>
+              </ul>
+              <p className="path-role">
+                Lối chơi <strong>Công phá · Kiểm soát</strong>
+              </p>
+            </div>
+            <div className="path-character path-character-demon">
+              <Image
+                src="/images/ma-tu-character.png"
+                alt="Nam Ma Tu điều khiển ma diễm đỏ đen"
+                fill
+                sizes="(max-width: 1024px) 80vw, 36vw"
+                className="object-contain object-bottom"
+              />
             </div>
           </article>
         </div>
