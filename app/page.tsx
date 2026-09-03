@@ -113,10 +113,14 @@ export default function Home() {
             className="flex items-center gap-3"
             aria-label="Thiên Ma Đạo - Trang chủ"
           >
-            <span className="brand-seal">魔</span>
-            <span className="font-serif text-xl font-semibold tracking-[0.14em] text-[#263d36]">
-              THIÊN MA ĐẠO
-            </span>
+            <Image
+              src="/images/thien-ma-dao-logo.png"
+              alt="Thiên Ma Đạo"
+              width={1402}
+              height={1122}
+              sizes="(min-width: 768px) 110px, 90px"
+              className="h-auto w-[90px] object-contain md:w-[110px]"
+            />
           </a>
           <nav
             className="hidden items-center gap-9 text-sm text-[#375047]/75 md:flex"
@@ -174,10 +178,16 @@ export default function Home() {
               <span className="h-px w-12 bg-[#a54135]/60" />
               Tiên ma do tâm · Đạo tại bản ngã
             </div>
-            <h1 className="font-display text-[clamp(4.2rem,10vw,8.8rem)] font-semibold leading-[0.82] tracking-[-0.045em] text-[#203b32]">
-              THIÊN
-              <br />
-              <span className="text-[#ae4235]">MA ĐẠO</span>
+            <h1 className="w-full max-w-[340px] sm:max-w-[420px] lg:max-w-[500px]">
+              <Image
+                src="/images/thien-ma-dao-logo.png"
+                alt="Thiên Ma Đạo"
+                width={1402}
+                height={1122}
+                priority
+                sizes="(min-width: 1024px) 500px, (min-width: 640px) 420px, min(340px, 90vw)"
+                className="h-auto w-full object-contain"
+              />
             </h1>
             <p className="mt-7 max-w-xl border-l-2 border-[#bd8e47]/55 pl-5 text-base leading-7 text-[#39534a] sm:text-lg">
               Một niệm thành tiên, một niệm hóa ma. Trùng sinh qua vô số kiếp,
