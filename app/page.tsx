@@ -81,7 +81,7 @@ export default function Home() {
       <FlyingGiftDog />
       <section className="hero relative isolate flex min-h-screen flex-col">
         <Image
-          src="/images/thien-ma-dao-hero.png"
+          src="/images/thien-ma-dao-hero.webp"
           alt="Tiên ma đứng giữa tiên cảnh trong Thiên Ma Đạo"
           fill
           priority
@@ -91,7 +91,7 @@ export default function Home() {
         <div className="hero-wash absolute inset-0 -z-20" />
         <div className="crane-layer crane-layer-one" aria-hidden="true">
           <Image
-            src="/images/crane-flock.png"
+            src="/images/crane-flock.webp"
             alt=""
             fill
             sizes="70vw"
@@ -100,7 +100,7 @@ export default function Home() {
         </div>
         <div className="crane-layer crane-layer-two" aria-hidden="true">
           <Image
-            src="/images/crane-flock.png"
+            src="/images/crane-flock.webp"
             alt=""
             fill
             sizes="45vw"
@@ -114,7 +114,7 @@ export default function Home() {
             aria-label="Thiên Ma Đạo - Trang chủ"
           >
             <Image
-              src="/images/thien-ma-dao-logo.png"
+              src="/images/thien-ma-dao-logo.webp"
               alt="Thiên Ma Đạo"
               width={1402}
               height={1122}
@@ -180,7 +180,7 @@ export default function Home() {
             </div>
             <h1 className="w-full max-w-[340px] sm:max-w-[420px] lg:max-w-[500px]">
               <Image
-                src="/images/thien-ma-dao-logo.png"
+                src="/images/thien-ma-dao-logo.webp"
                 alt="Thiên Ma Đạo"
                 width={1402}
                 height={1122}
@@ -203,7 +203,8 @@ export default function Home() {
                   'hero-button-primary h-14 rounded-full px-7',
                 )}
                 href={GAME_DOWNLOADS.android.url}
-                download
+                target="_blank"
+                rel="noreferrer"
               >
                 <Download className="size-5" />
                 Tải APK
@@ -296,7 +297,7 @@ export default function Home() {
             </div>
             <div className="path-character path-character-immortal">
               <Image
-                src="/images/tien-tu-character.png"
+                src="/images/tien-tu-character.webp"
                 alt="Nữ Tiên Tu với pháp khí và hồ điệp"
                 fill
                 sizes="(max-width: 1024px) 80vw, 36vw"
@@ -335,7 +336,7 @@ export default function Home() {
             </div>
             <div className="path-character path-character-demon">
               <Image
-                src="/images/ma-tu-character.png"
+                src="/images/ma-tu-character.webp"
                 alt="Nam Ma Tu điều khiển ma diễm đỏ đen"
                 fill
                 sizes="(max-width: 1024px) 80vw, 36vw"
@@ -446,7 +447,8 @@ export default function Home() {
                 'h-14 rounded-full bg-[#ae4437] px-7 text-white hover:bg-[#92372d]',
               )}
               href={GAME_DOWNLOADS.android.url}
-              download
+              target="_blank"
+              rel="noreferrer"
             >
               <Download />
               Tải Android

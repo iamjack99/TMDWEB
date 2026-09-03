@@ -7,12 +7,12 @@ export const GAME_DOWNLOADS = {
   version: '0.1 Alpha',
   android: {
     platform: 'android',
-    url: '/downloads/thien-ma-dao-latest.apk',
-    external: false,
+    url: 'https://github.com/iamjack99/TMDWEB/releases/download/v0.1-alpha/TMD.apk',
+    external: true,
   },
   ios: {
     platform: 'ios',
-    url: 'https://testflight.apple.com/',
+    url: 'https://testflight.apple.com/join/7bswvhG5',
     external: true,
   },
 } as const;

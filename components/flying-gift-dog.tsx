@@ -67,10 +67,10 @@ export function FlyingGiftDog() {
         aria-label={`Bắt Cẩu Hệ Thống để nhận giftcode${taps ? `, đã chạm ${taps} lần` : ''}`}
       >
         <span className="gift-dog-frame gift-dog-frame-down" aria-hidden="true">
-          <img src="/images/cau-he-thong-spritesheet.png" alt="" />
+          <img src="/images/cau-he-thong-spritesheet.webp" alt="" />
         </span>
         <span className="gift-dog-frame gift-dog-frame-up" aria-hidden="true">
-          <img src="/images/cau-he-thong-spritesheet.png" alt="" />
+          <img src="/images/cau-he-thong-spritesheet.webp" alt="" />
         </span>
         <span className="gift-dog-hint" aria-live="polite">
           {taunt}
