@@ -23,30 +23,30 @@
   --color-destructive: var(--destructive);
   --font-sans: var(--font-sans);
   --font-serif: var(--font-display);
-  --radius-sm: 0.2rem;
-  --radius-md: 0.3rem;
-  --radius-lg: 0.4rem;
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
 }
 :root {
-  --background: #081211;
-  --foreground: #e8dfc5;
-  --card: #0d1918;
-  --card-foreground: #e8dfc5;
-  --popover: #0d1918;
-  --popover-foreground: #e8dfc5;
-  --primary: #c5a557;
-  --primary-foreground: #0b1210;
-  --secondary: #142321;
-  --secondary-foreground: #e8dfc5;
-  --muted: #14201f;
-  --muted-foreground: #a7a496;
-  --accent: #1c3430;
-  --accent-foreground: #f0e6c8;
-  --destructive: #9f3434;
-  --border: #6f664c55;
-  --input: #6f664c55;
-  --ring: #c5a557;
-  --radius: 0.35rem;
+  --background: #f5edda;
+  --foreground: #263f36;
+  --card: #fffaf0;
+  --card-foreground: #263f36;
+  --popover: #fffaf0;
+  --popover-foreground: #263f36;
+  --primary: #ad4538;
+  --primary-foreground: #fff;
+  --secondary: #dbe7dc;
+  --secondary-foreground: #2d4a40;
+  --muted: #e8dfca;
+  --muted-foreground: #60746b;
+  --accent: #dfebdf;
+  --accent-foreground: #263f36;
+  --destructive: #a93e35;
+  --border: #a7874d40;
+  --input: #a7874d40;
+  --ring: #ad4538;
+  --radius: 1rem;
 }
 * {
   border-color: var(--border);
@@ -63,65 +63,36 @@ body {
   font-family: var(--font-display), serif;
 }
 .hero {
-  background: #07110f;
+  background: #efe4cb;
 }
 .hero-art {
   object-position: center center;
 }
-.hero::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  z-index: -1;
+.hero-wash {
   background:
-    linear-gradient(180deg, transparent 50%, #081211 100%),
-    radial-gradient(
-      ellipse at 75% 63%,
-      transparent 0 7%,
-      rgba(3, 10, 9, 0.3) 40%
-    );
+    linear-gradient(
+      90deg,
+      rgba(247, 240, 221, 0.96) 0%,
+      rgba(247, 240, 221, 0.78) 38%,
+      rgba(247, 240, 221, 0.12) 67%,
+      transparent 100%
+    ),
+    linear-gradient(180deg, rgba(250, 245, 232, 0.3) 55%, #f5edda 100%);
 }
-.stars {
-  position: absolute;
-  inset: 0;
-  z-index: -2;
-  opacity: 0.65;
-  background-image: radial-gradient(circle, #d8ca9b 0 1px, transparent 1.5px);
-  background-size: 91px 83px;
-  mask-image: linear-gradient(to bottom, black, transparent 70%);
-}
-.mountains {
-  position: absolute;
-  inset: 28% -10% 0 42%;
-  z-index: -2;
-  opacity: 0.55;
-  filter: blur(0.2px);
-  background:
-    linear-gradient(135deg, transparent 39%, #172d29 40% 48%, transparent 49%) 0
-      40%/44% 70%,
-    linear-gradient(45deg, transparent 44%, #10221f 45% 58%, transparent 59%)
-      45% 20%/56% 85%;
-  background-repeat: no-repeat;
-}
-.mist {
-  position: absolute;
-  z-index: -1;
-  width: 75%;
-  height: 26%;
+.brand-seal {
+  display: grid;
+  width: 2.65rem;
+  height: 2.65rem;
+  place-items: center;
+  border: 1px solid rgba(170, 65, 52, 0.75);
   border-radius: 50%;
-  background: rgba(190, 210, 196, 0.1);
-  filter: blur(60px);
-  animation: drift 13s ease-in-out infinite alternate;
-}
-.mist-one {
-  right: -16%;
-  bottom: 13%;
-}
-.mist-two {
-  right: 18%;
-  bottom: -8%;
-  opacity: 0.55;
-  animation-delay: -5s;
+  background: rgba(255, 250, 239, 0.65);
+  color: #ad4538;
+  font-family: var(--font-display), serif;
+  font-size: 1.1rem;
+  box-shadow:
+    inset 0 0 0 3px rgba(255, 250, 239, 0.9),
+    inset 0 0 0 4px rgba(170, 65, 52, 0.22);
 }
 .nav-link {
   position: relative;
@@ -134,93 +105,249 @@ body {
   right: 100%;
   bottom: -8px;
   height: 1px;
-  background: #c6a85f;
+  background: #ad4538;
   transition: right 0.25s ease;
 }
 .nav-link:hover {
-  color: #f0e6c8;
+  color: #a13f33;
 }
 .nav-link:hover::after {
   right: 0;
 }
-.download-primary {
-  background: linear-gradient(135deg, #d3b66b, #9e7933);
-  color: #0d1512;
-  box-shadow: 0 12px 36px rgba(183, 143, 54, 0.18);
+.hero-button-primary {
+  background: linear-gradient(135deg, #bb5142, #96382f);
+  color: white;
+  box-shadow: 0 14px 32px rgba(157, 59, 48, 0.22);
 }
-.download-primary:hover {
-  background: linear-gradient(135deg, #e2ca84, #b78d3b);
+.hero-button-primary:hover {
+  background: linear-gradient(135deg, #ca604f, #a64235);
 }
-.paper-texture {
-  background-color: #07100f;
+.hero-button-light {
+  border-color: rgba(70, 94, 82, 0.3);
+  background: rgba(255, 250, 239, 0.76);
+  color: #29443a;
+  box-shadow: 0 10px 25px rgba(63, 79, 68, 0.1);
+  backdrop-filter: blur(8px);
+}
+.hero-button-light:hover {
+  background: #fffaf0;
+  color: #ad4538;
+}
+.zalo-button {
+  background: linear-gradient(135deg, #1688f0, #0668cf);
+  color: #fff;
+  box-shadow: 0 14px 30px rgba(8, 112, 218, 0.23);
+}
+.zalo-button:hover {
+  background: linear-gradient(135deg, #2999ff, #0876df);
+}
+.crane-layer {
+  position: absolute;
+  z-index: 10;
+  pointer-events: none;
+  will-change: transform, opacity;
+  filter: drop-shadow(0 6px 10px rgba(64, 70, 62, 0.12));
+}
+.crane-layer-one {
+  top: 7%;
+  left: -42%;
+  width: 62vw;
+  height: 35vw;
+  opacity: 0.58;
+  animation: cranes-flight 24s linear infinite;
+}
+.crane-layer-two {
+  top: 24%;
+  left: -36%;
+  width: 45vw;
+  height: 25vw;
+  opacity: 0.32;
+  animation: cranes-flight-two 31s linear 7s infinite;
+}
+@keyframes cranes-flight {
+  0% {
+    transform: translate3d(-15vw, 10vh, 0) scale(0.62);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.58;
+  }
+  88% {
+    opacity: 0.58;
+  }
+  100% {
+    transform: translate3d(170vw, -20vh, 0) scale(1);
+    opacity: 0;
+  }
+}
+@keyframes cranes-flight-two {
+  0% {
+    transform: translate3d(-20vw, 8vh, 0) scale(0.5);
+    opacity: 0;
+  }
+  12% {
+    opacity: 0.32;
+  }
+  88% {
+    opacity: 0.32;
+  }
+  100% {
+    transform: translate3d(180vw, -16vh, 0) scale(0.86);
+    opacity: 0;
+  }
+}
+.paper-light {
+  background-color: #f7efdd;
   background-image:
-    radial-gradient(
-      circle at 50% 0,
-      rgba(125, 159, 139, 0.08),
-      transparent 35%
-    ),
+    radial-gradient(circle at 50% 0, rgba(147, 188, 168, 0.2), transparent 38%),
     repeating-linear-gradient(
       115deg,
       transparent 0 80px,
-      rgba(209, 185, 120, 0.015) 81px 82px
+      rgba(157, 119, 53, 0.025) 81px 82px
     );
 }
 .seal {
   display: grid;
-  width: 3.25rem;
-  height: 3.25rem;
+  width: 3.3rem;
+  height: 3.3rem;
   place-items: center;
-  border: 1px solid rgba(186, 74, 48, 0.75);
-  color: #c05f45;
+  border: 1px solid rgba(174, 67, 53, 0.8);
+  color: #b64c3e;
   font-family: var(--font-display), serif;
-  font-size: 1.45rem;
+  font-size: 1.5rem;
   transform: rotate(-3deg);
   box-shadow:
-    inset 0 0 0 3px #07100f,
-    inset 0 0 0 4px rgba(186, 74, 48, 0.35);
+    inset 0 0 0 3px #f7efdd,
+    inset 0 0 0 4px rgba(174, 67, 53, 0.32);
 }
 .section-kicker {
-  font-size: 0.75rem;
+  font-size: 0.72rem;
+  font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.4em;
-  color: #bda45f;
+  color: #ad493c;
+}
+.path-card {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  min-height: 9rem;
+  border: 1px solid rgba(159, 126, 70, 0.24);
+  border-radius: 1.5rem;
+  padding: 1.5rem;
+  text-align: left;
+  box-shadow: 0 15px 35px rgba(82, 79, 61, 0.07);
+}
+.path-card > span {
+  font-family: var(--font-display), serif;
+  font-size: 3.5rem;
+}
+.path-card p {
+  font-size: 0.67rem;
+  font-weight: 600;
+  letter-spacing: 0.3em;
+}
+.path-card h3 {
+  margin-top: 0.25rem;
+  font-family: var(--font-display), serif;
+  font-size: 1.65rem;
+  font-weight: 600;
+}
+.path-immortal {
+  background: linear-gradient(135deg, #f9f5e9, #dceadd);
+  color: #365b4e;
+}
+.path-demon {
+  background: linear-gradient(135deg, #fff5e8, #f2d2c5);
+  color: #983f34;
 }
 .feature-card {
-  background: linear-gradient(145deg, rgba(24, 42, 38, 0.22), transparent);
+  background: linear-gradient(
+    145deg,
+    rgba(255, 252, 243, 0.85),
+    rgba(241, 231, 208, 0.65)
+  );
   transition:
-    background 0.35s ease,
-    transform 0.35s ease;
+    background 0.3s ease,
+    transform 0.3s ease;
 }
 .feature-card:hover {
-  background: rgba(35, 58, 51, 0.35);
+  background: #fffaf0;
   transform: translateY(-4px);
 }
-@keyframes drift {
-  from {
-    transform: translate3d(-3%, 0, 0) scale(1);
-  }
-  to {
-    transform: translate3d(4%, -12%, 0) scale(1.08);
-  }
+.realm-section {
+  background: #f8f1e2;
+  background-image:
+    radial-gradient(
+      circle at 8% 25%,
+      rgba(145, 191, 169, 0.14),
+      transparent 23%
+    ),
+    radial-gradient(circle at 92% 78%, rgba(209, 118, 91, 0.1), transparent 24%);
+}
+.realm-card {
+  border: 1px solid rgba(161, 129, 74, 0.2);
+  border-radius: 1.25rem;
+  background: rgba(255, 251, 241, 0.82);
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 12px 30px rgba(74, 75, 58, 0.06);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+.realm-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 18px 38px rgba(74, 75, 58, 0.11);
+}
+.realm-icon {
+  width: 100%;
+  aspect-ratio: 1.5/1;
+  border-radius: 0.85rem;
+  background-image: url('/images/realm-sprites.png');
+  background-size: 600% 300%;
+  background-repeat: no-repeat;
+  box-shadow: inset 0 0 0 1px rgba(149, 121, 74, 0.12);
+}
+.cta-band {
+  background: linear-gradient(120deg, #dce8dc, #f2d8c6 52%, #e9d29d);
 }
 @media (max-width: 767px) {
   .hero-art {
-    object-position: 64% center;
+    object-position: 66% center;
   }
-  .hero::after {
+  .hero-wash {
     background:
-      linear-gradient(90deg, rgba(3, 10, 9, 0.82), rgba(3, 10, 9, 0.15)),
-      linear-gradient(180deg, rgba(3, 10, 9, 0.2) 40%, #081211 100%);
+      linear-gradient(
+        90deg,
+        rgba(247, 240, 221, 0.95),
+        rgba(247, 240, 221, 0.58)
+      ),
+      linear-gradient(180deg, transparent 55%, #f5edda 100%);
+  }
+  .crane-layer-one {
+    width: 115vw;
+    height: 65vw;
+  }
+  .crane-layer-two {
+    width: 90vw;
+    height: 52vw;
+  }
+  .realm-card {
+    padding: 0.75rem;
   }
 }
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
   }
-  .mist {
+  .crane-layer {
     animation: none;
+    opacity: 0.25;
+    transform: translate3d(60vw, 0, 0);
   }
-  .feature-card {
+  .feature-card,
+  .realm-card {
     transition: none;
   }
 }

@@ -14,30 +14,21 @@ const sans = Be_Vietnam_Pro({
 });
 
 export const metadata: Metadata = {
-  title: 'Vấn Thiên — Nhất niệm nhập tiên đồ',
+  title: 'Thiên Ma Đạo — Tiên ma do tâm',
   description:
-    'Bước vào thế giới tu tiên Vấn Thiên. Tự viết thiên mệnh, khai tông lập phái và chinh phục cửu trọng thiên.',
+    'Chọn tu tiên hoặc tu ma, trùng sinh vô hạn và chinh phục 18 cảnh giới trong Thiên Ma Đạo.',
   openGraph: {
-    title: 'Vấn Thiên — Nhất niệm nhập tiên đồ',
+    title: 'Thiên Ma Đạo — Tiên ma do tâm',
     description:
-      'Tự viết thiên mệnh, khai tông lập phái và chinh phục cửu trọng thiên.',
-    images: [
-      {
-        url: '/og.png',
-        width: 1792,
-        height: 1024,
-        alt: 'Vấn Thiên — Nhất niệm nhập tiên đồ',
-      },
-    ],
+      'Chọn tu tiên hoặc tu ma, trùng sinh vô hạn và chinh phục 18 cảnh giới.',
     locale: 'vi_VN',
     type: 'website',
   },
   twitter: {
-    card: 'summary_large_image',
-    title: 'Vấn Thiên — Nhất niệm nhập tiên đồ',
+    card: 'summary',
+    title: 'Thiên Ma Đạo — Tiên ma do tâm',
     description:
-      'Tự viết thiên mệnh, khai tông lập phái và chinh phục cửu trọng thiên.',
-    images: ['/og.png'],
+      'Chọn tu tiên hoặc tu ma, trùng sinh vô hạn và chinh phục 18 cảnh giới.',
   },
 };
 

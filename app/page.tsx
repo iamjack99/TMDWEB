@@ -1,54 +1,77 @@
 import Image from 'next/image';
 import {
   Apple,
+  ArrowUpRight,
+  CircleDot,
+  ChevronDown,
   Download,
+  FlaskConical,
+  Gem,
+  Infinity as InfinityIcon,
   Menu,
+  MessageCircle,
+  ShieldPlus,
   Sparkles,
   Swords,
-  Mountain,
-  Gem,
-  Users,
-  ArrowUpRight,
-  ChevronDown,
 } from 'lucide-react';
 import { buttonVariants } from '@/components/ui/button';
-import { cn } from '@/lib/utils';
 import { GAME_DOWNLOADS } from '@/lib/game-config';
+import { cn } from '@/lib/utils';
+
+const ZALO_URL = 'https://zalo.me/g/mwdtaq765';
 
 const features = [
   {
-    icon: Mountain,
-    number: '01',
-    title: 'Tu luyện phá cảnh',
-    text: 'Từ Luyện Khí đến Độ Kiếp, mỗi lựa chọn đều định hình con đường đại đạo.',
+    icon: CircleDot,
+    title: 'Tiên ma tùy tâm',
+    text: 'Chọn tu tiên giữ chính đạo, hoặc nhập ma phá bỏ thiên quy. Mỗi con đường mở ra công pháp và cơ duyên riêng.',
+  },
+  {
+    icon: InfinityIcon,
+    title: 'Trùng sinh vô hạn',
+    text: 'Mỗi kiếp là một khởi đầu mới. Kế thừa thiên phú, sửa lại nhân quả và tiến gần hơn tới đại đạo.',
   },
   {
     icon: Swords,
-    number: '02',
-    title: 'Đấu pháp tự do',
-    text: 'Kết hợp công pháp, linh căn và pháp bảo để tạo nên lối chiến đấu của riêng ngươi.',
+    title: 'Boss thế giới',
+    text: 'Cùng vạn đạo hữu chinh phạt thượng cổ ma thần, tranh đoạt kỳ trân và bí cảnh hiếm có.',
   },
   {
-    icon: Users,
-    number: '03',
-    title: 'Khai tông lập phái',
-    text: 'Chiêu mộ đồng đạo, tranh đoạt linh mạch và lưu danh giữa tam giới.',
+    icon: ShieldPlus,
+    title: 'Luyện khí trang bị',
+    text: 'Cường hóa, tinh luyện và khảm linh thạch để đánh thức sức mạnh ẩn sâu trong thần binh.',
+  },
+  {
+    icon: FlaskConical,
+    title: 'Đan đạo thông thần',
+    text: 'Thu thập linh dược, điều khiển chân hỏa và luyện thành tiên đan giúp phá cảnh nghịch thiên.',
   },
   {
     icon: Gem,
-    number: '04',
     title: 'Vạn vật hữu linh',
-    text: 'Săn dị thú, luyện tiên đan và thu thập kỳ trân ẩn giấu khắp cửu châu.',
+    text: 'Khám phá bí cảnh, thu phục linh thú và tìm kiếm cơ duyên giữa một thế giới luôn đổi thay.',
   },
 ];
 
 const realms = [
-  'Phàm Nhân',
   'Luyện Khí',
   'Trúc Cơ',
-  'Kim Đan',
+  'Kết Đan',
   'Nguyên Anh',
   'Hóa Thần',
+  'Luyện Hư',
+  'Hợp Thể',
+  'Đại Thừa',
+  'Độ Kiếp',
+  'Chân Tiên',
+  'Địa Tiên',
+  'Thiên Tiên',
+  'Huyền Tiên',
+  'Kim Tiên',
+  'Thái Ất Kim Tiên',
+  'Đại La Kim Tiên',
+  'Đạo Nguyên',
+  'Hỗn Nguyên',
 ];
 
 export default function Home() {
@@ -56,193 +79,231 @@ export default function Home() {
     <main className="min-h-screen overflow-hidden bg-background text-foreground">
       <section className="hero relative isolate flex min-h-screen flex-col">
         <Image
-          src="/images/van-thien-hero.png"
-          alt="Tiên nhân đứng trước cửu trọng thiên trong Vấn Thiên"
+          src="/images/thien-ma-dao-hero.png"
+          alt="Tiên ma đứng giữa tiên cảnh trong Thiên Ma Đạo"
           fill
           priority
           sizes="100vw"
           className="hero-art -z-30 object-cover"
         />
-        <div className="stars" aria-hidden="true" />
-        <header className="relative z-20 mx-auto flex w-full max-w-7xl items-center justify-between px-5 py-6 lg:px-10">
+        <div className="hero-wash absolute inset-0 -z-20" />
+        <div className="crane-layer crane-layer-one" aria-hidden="true">
+          <Image
+            src="/images/crane-flock.png"
+            alt=""
+            fill
+            sizes="70vw"
+            className="object-contain"
+          />
+        </div>
+        <div className="crane-layer crane-layer-two" aria-hidden="true">
+          <Image
+            src="/images/crane-flock.png"
+            alt=""
+            fill
+            sizes="45vw"
+            className="object-contain"
+          />
+        </div>
+        <header className="relative z-30 mx-auto flex w-full max-w-7xl items-center justify-between px-5 py-6 lg:px-10">
           <a
             href="#top"
-            className="group flex items-center gap-3"
-            aria-label="Vấn Thiên - Trang chủ"
+            className="flex items-center gap-3"
+            aria-label="Thiên Ma Đạo - Trang chủ"
           >
-            <span className="grid size-10 place-items-center rounded-full border border-[#d8b975]/35 bg-[#0d1918]/70 font-serif text-lg text-[#e5c981] shadow-[inset_0_0_20px_#b9953c18]">
-              天
-            </span>
-            <span className="font-serif text-xl tracking-[0.16em] text-[#f3e7c3]">
-              VẤN THIÊN
+            <span className="brand-seal">魔</span>
+            <span className="font-serif text-xl font-semibold tracking-[0.14em] text-[#263d36]">
+              THIÊN MA ĐẠO
             </span>
           </a>
           <nav
-            className="hidden items-center gap-9 text-sm text-[#d6d0bc]/75 md:flex"
+            className="hidden items-center gap-9 text-sm text-[#375047]/75 md:flex"
             aria-label="Điều hướng chính"
           >
             <a className="nav-link" href="#gioi-thieu">
-              Thiên mệnh
+              Tiên ma
             </a>
             <a className="nav-link" href="#dac-sac">
               Đặc sắc
             </a>
-            <a className="nav-link" href="#the-gioi">
-              Thế giới
+            <a className="nav-link" href="#canh-gioi">
+              Cảnh giới
             </a>
           </nav>
           <a
             href="#tai-game"
             className={cn(
               buttonVariants(),
-              'hidden rounded-none border border-[#dfc27c]/45 bg-[#bd9443] px-6 text-[#101715] hover:bg-[#d1ab5b] md:inline-flex',
+              'hidden rounded-full bg-[#ba4d3b] px-6 text-white shadow-lg shadow-[#ba4d3b]/15 hover:bg-[#9f3f30] md:inline-flex',
             )}
           >
             Tải game
           </a>
           <details className="relative md:hidden">
             <summary
-              className="grid size-10 cursor-pointer list-none place-items-center text-[#eadcb7]"
+              className="grid size-10 cursor-pointer list-none place-items-center text-[#314b42]"
               aria-label="Mở menu"
             >
               <Menu className="size-6" />
             </summary>
-            <nav className="absolute right-0 top-12 flex w-48 flex-col border border-[#c9ae69]/20 bg-[#07110f]/95 p-3 shadow-2xl backdrop-blur">
+            <nav className="absolute right-0 top-12 flex w-48 flex-col rounded-2xl border border-[#b69a62]/25 bg-[#fffaf0]/95 p-3 shadow-xl backdrop-blur">
               <a className="px-3 py-3" href="#gioi-thieu">
-                Thiên mệnh
+                Tiên ma
               </a>
               <a className="px-3 py-3" href="#dac-sac">
                 Đặc sắc
               </a>
-              <a className="px-3 py-3" href="#the-gioi">
-                Thế giới
+              <a className="px-3 py-3" href="#canh-gioi">
+                Cảnh giới
               </a>
-              <a className="px-3 py-3 text-[#d4b767]" href="#tai-game">
+              <a className="px-3 py-3 text-[#b84838]" href="#tai-game">
                 Tải game
               </a>
             </nav>
           </details>
         </header>
+
         <div
           id="top"
-          className="relative z-10 mx-auto flex w-full max-w-7xl flex-1 items-center px-5 pb-16 pt-14 lg:px-10"
+          className="relative z-20 mx-auto flex w-full max-w-7xl flex-1 items-center px-5 pb-20 pt-12 lg:px-10"
         >
-          <div className="max-w-3xl">
-            <div className="mb-6 flex items-center gap-3 text-xs uppercase tracking-[0.38em] text-[#cbb578]">
-              <span className="h-px w-12 bg-[#cbb578]/70" />
-              Nhất niệm nhập tiên đồ
+          <div className="max-w-[720px]">
+            <div className="mb-5 flex items-center gap-3 text-xs font-medium uppercase tracking-[0.34em] text-[#a54135]">
+              <span className="h-px w-12 bg-[#a54135]/60" />
+              Tiên ma do tâm · Đạo tại bản ngã
             </div>
-            <p className="mb-1 font-serif text-lg tracking-[0.5em] text-[#d8c89c]/65">
-              TIÊN HIỆP NHẬP VAI
-            </p>
-            <h1 className="font-display text-[clamp(4rem,11vw,9.5rem)] leading-[0.82] tracking-[-0.035em] text-[#f0e6c8]">
-              VẤN <span className="text-[#bda35e]">THIÊN</span>
+            <h1 className="font-display text-[clamp(4.2rem,10vw,8.8rem)] font-semibold leading-[0.82] tracking-[-0.045em] text-[#203b32]">
+              THIÊN
+              <br />
+              <span className="text-[#ae4235]">MA ĐẠO</span>
             </h1>
-            <p className="mt-8 max-w-xl border-l border-[#c6a860]/55 pl-5 text-base leading-7 text-[#d2cebf]/72 sm:text-lg">
-              Một niệm phàm tâm, vạn kiếp tiên đồ. Tự viết thiên mệnh, khai tông
-              lập phái và bước qua cửu trọng thiên trong thế giới tu tiên rộng
-              lớn.
+            <p className="mt-7 max-w-xl border-l-2 border-[#bd8e47]/55 pl-5 text-base leading-7 text-[#39534a] sm:text-lg">
+              Một niệm thành tiên, một niệm hóa ma. Trùng sinh qua vô số kiếp,
+              tự chọn con đường và viết lại thiên mệnh của riêng ngươi.
             </p>
             <div
               id="tai-game"
-              className="mt-10 flex flex-col gap-3 sm:flex-row"
+              className="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap"
             >
               <a
                 className={cn(
                   buttonVariants({ size: 'lg' }),
-                  'download-primary h-14 rounded-none px-7 text-sm uppercase tracking-[0.12em]',
+                  'hero-button-primary h-14 rounded-full px-7',
                 )}
                 href={GAME_DOWNLOADS.android.url}
                 download
               >
                 <Download className="size-5" />
-                Tải APK Android
+                Tải APK
               </a>
               <a
                 className={cn(
                   buttonVariants({ size: 'lg', variant: 'outline' }),
-                  'h-14 rounded-none border-[#d9c58b]/35 bg-[#0a1514]/45 px-7 text-sm uppercase tracking-[0.12em] text-[#ece2c5] hover:bg-[#d9c58b]/10 hover:text-white',
+                  'hero-button-light h-14 rounded-full px-7',
                 )}
                 href={GAME_DOWNLOADS.ios.url}
                 target="_blank"
                 rel="noreferrer"
               >
                 <Apple className="size-5" />
-                Tham gia TestFlight
+                TestFlight
+              </a>
+              <a
+                className={cn(
+                  buttonVariants({ size: 'lg' }),
+                  'zalo-button h-14 rounded-full px-7',
+                )}
+                href={ZALO_URL}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <MessageCircle className="size-5" />
+                Chat Zalo <ArrowUpRight className="size-4" />
               </a>
             </div>
-            <div className="mt-5 flex items-center gap-2 text-xs text-[#aea994]/60">
-              <Sparkles className="size-3.5 text-[#c4a75e]" />
+            <div className="mt-5 flex items-center gap-2 text-xs text-[#536c63]">
+              <Sparkles className="size-3.5 text-[#b34a3b]" />
               Phiên bản {GAME_DOWNLOADS.version} · Hoàn toàn miễn phí
             </div>
           </div>
         </div>
-        <div className="mist mist-one" aria-hidden="true" />
-        <div className="mist mist-two" aria-hidden="true" />
         <a
           href="#gioi-thieu"
-          className="absolute bottom-7 left-1/2 z-20 hidden -translate-x-1/2 flex-col items-center gap-2 text-[10px] uppercase tracking-[0.35em] text-[#d6cfba]/55 sm:flex"
+          className="absolute bottom-6 left-1/2 z-20 hidden -translate-x-1/2 flex-col items-center gap-2 text-[10px] uppercase tracking-[0.32em] text-[#3d594f]/65 sm:flex"
         >
           Khám phá
-          <span className="h-10 w-px bg-gradient-to-b from-[#cdb777] to-transparent" />
+          <span className="h-9 w-px bg-gradient-to-b from-[#9a7140] to-transparent" />
         </a>
       </section>
 
       <section
         id="gioi-thieu"
-        className="paper-texture relative border-t border-[#b99c58]/15 px-5 py-28 text-center lg:px-10"
+        className="paper-light relative px-5 py-28 text-center lg:px-10"
       >
         <span className="seal mx-auto">道</span>
-        <p className="mt-7 text-xs uppercase tracking-[0.42em] text-[#bda45f]">
-          Thiên mệnh đã định?
-        </p>
-        <h2 className="mx-auto mt-5 max-w-3xl font-serif text-4xl leading-tight text-[#eee3c4] sm:text-6xl">
-          Không. Đạo của ngươi,
+        <p className="section-kicker mt-7">Nhất thể lưỡng diện</p>
+        <h2 className="mx-auto mt-5 max-w-4xl font-serif text-4xl leading-tight text-[#263f36] sm:text-6xl">
+          Tu tiên giữ thiên đạo.
           <br />
-          do chính ngươi lựa chọn.
+          <span className="text-[#b5493a]">Tu ma phá thiên quy.</span>
         </h2>
-        <p className="mx-auto mt-7 max-w-2xl text-base leading-8 text-[#b8b5a9]/70">
-          Từ một phàm nhân vô danh, trải qua cơ duyên và sinh tử để tìm ra đại
-          đạo của riêng mình. Mỗi quyết định mở ra một nhân quả, mỗi lần đột phá
-          viết tiếp một truyền kỳ.
+        <p className="mx-auto mt-7 max-w-2xl text-base leading-8 text-[#53685f]">
+          Không có con đường đúng tuyệt đối. Lựa chọn công pháp, kết giao hoặc
+          đối đầu các thế lực, rồi gánh lấy nhân quả qua từng lần trùng sinh.
         </p>
+        <div className="mx-auto mt-14 grid max-w-4xl gap-4 sm:grid-cols-2">
+          <article className="path-card path-immortal">
+            <span>仙</span>
+            <div>
+              <p>TIÊN ĐẠO</p>
+              <h3>Thuận thiên tu hành</h3>
+            </div>
+          </article>
+          <article className="path-card path-demon">
+            <span>魔</span>
+            <div>
+              <p>MA ĐẠO</p>
+              <h3>Nghịch thiên cải mệnh</h3>
+            </div>
+          </article>
+        </div>
       </section>
 
       <section
         id="dac-sac"
-        className="border-y border-[#b99c58]/15 bg-[#0a1513] px-5 py-24 lg:px-10"
+        className="border-y border-[#aa8c54]/20 bg-[#e7dbc1] px-5 py-24 lg:px-10"
       >
         <div className="mx-auto max-w-7xl">
           <div className="flex flex-col justify-between gap-5 sm:flex-row sm:items-end">
             <div>
-              <p className="section-kicker">Tứ phương cơ duyên</p>
-              <h2 className="mt-3 font-serif text-4xl text-[#eee3c4] sm:text-6xl">
-                Một thế giới, vạn con đường
+              <p className="section-kicker">Lục đại đặc sắc</p>
+              <h2 className="mt-3 font-serif text-4xl text-[#263f36] sm:text-6xl">
+                Mỗi kiếp, một truyền kỳ
               </h2>
             </div>
-            <p className="max-w-sm text-sm leading-7 text-[#aaa799]/65">
-              Không class cố định. Không hành trình giống nhau. Chỉ có đạo tâm
-              và lựa chọn của chính ngươi.
+            <p className="max-w-sm text-sm leading-7 text-[#586c63]">
+              Từ lựa chọn đạo tâm đến từng viên đan dược, mọi hệ thống đều giúp
+              bạn tạo nên một hành trình riêng.
             </p>
           </div>
-          <div className="mt-14 grid border-l border-t border-[#c5a85e]/20 sm:grid-cols-2 lg:grid-cols-4">
-            {features.map(({ icon: Icon, number, title, text }) => (
+          <div className="mt-14 grid overflow-hidden rounded-3xl border border-[#a98d56]/25 bg-[#f6efdf] sm:grid-cols-2 lg:grid-cols-3">
+            {features.map(({ icon: Icon, title, text }, i) => (
               <article
-                key={number}
-                className="feature-card group min-h-72 border-b border-r border-[#c5a85e]/20 p-7"
+                key={title}
+                className="feature-card group min-h-64 border-b border-r border-[#a98d56]/20 p-7"
               >
                 <div className="flex items-start justify-between">
-                  <Icon className="size-7 text-[#c7ab63]" strokeWidth={1.25} />
-                  <span className="font-serif text-sm text-[#c7ab63]/45">
-                    {number}
+                  <span className="grid size-12 place-items-center rounded-full bg-[#dae5d9] text-[#43665a]">
+                    <Icon className="size-6" strokeWidth={1.5} />
+                  </span>
+                  <span className="font-serif text-sm text-[#a8493b]/55">
+                    {String(i + 1).padStart(2, '0')}
                   </span>
                 </div>
-                <h3 className="mt-20 font-serif text-2xl text-[#ede1c1]">
+                <h3 className="mt-12 font-serif text-2xl font-semibold text-[#2c463d]">
                   {title}
                 </h3>
-                <p className="mt-3 text-sm leading-6 text-[#aaa799]/65">
-                  {text}
-                </p>
+                <p className="mt-3 text-sm leading-6 text-[#63766e]">{text}</p>
               </article>
             ))}
           </div>
@@ -250,99 +311,99 @@ export default function Home() {
       </section>
 
       <section
-        id="the-gioi"
-        className="relative isolate min-h-[760px] overflow-hidden px-5 py-28 lg:px-10"
+        id="canh-gioi"
+        className="realm-section relative px-5 py-28 lg:px-10"
       >
-        <Image
-          src="/images/van-thien-hero.png"
-          alt="Quần sơn và tiên điện giữa biển mây"
-          fill
-          sizes="100vw"
-          className="-z-20 object-cover object-right opacity-35"
-        />
-        <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,#07100f_5%,#07100fd9_42%,#07100f33),linear-gradient(0deg,#07100f_0%,transparent_40%,#07100f_100%)]" />
         <div className="mx-auto max-w-7xl">
-          <div className="max-w-xl">
-            <p className="section-kicker">Cửu châu · Tam giới</p>
-            <h2 className="mt-4 font-serif text-5xl leading-[1.05] text-[#eee3c4] sm:text-7xl">
-              Phá cảnh,
+          <div className="mx-auto max-w-3xl text-center">
+            <p className="section-kicker">Thập bát cảnh giới</p>
+            <h2 className="mt-4 font-serif text-4xl text-[#263f36] sm:text-6xl">
+              Từ một hơi thở phàm trần
               <br />
-              nghịch thiên mệnh
+              đến Hỗn Nguyên đại đạo
             </h2>
-            <p className="mt-6 max-w-md leading-8 text-[#bdb9aa]/70">
-              Cảnh giới không chỉ là sức mạnh. Đó là thử thách đạo tâm, là ranh
-              giới giữa phàm và tiên.
+            <p className="mx-auto mt-6 max-w-2xl leading-7 text-[#61746c]">
+              Mỗi lần phá cảnh là một lần đối mặt với tâm ma, thiên kiếp và giới
+              hạn của chính mình.
             </p>
           </div>
-          <ol className="mt-16 grid max-w-4xl grid-cols-2 gap-px border border-[#bea35d]/20 bg-[#bea35d]/20 sm:grid-cols-3 lg:grid-cols-6">
-            {realms.map((realm, i) => (
-              <li key={realm} className="bg-[#081210]/85 px-4 py-6 text-center">
-                <span className="block font-serif text-xs text-[#baa25e]/50">
-                  {String(i + 1).padStart(2, '0')}
-                </span>
-                <span className="mt-2 block font-serif text-lg text-[#e7dcc0]">
-                  {realm}
-                </span>
-              </li>
-            ))}
+          <ol className="mt-16 grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6">
+            {realms.map((realm, i) => {
+              const col = i % 6;
+              const row = Math.floor(i / 6);
+              return (
+                <li key={realm} className="realm-card">
+                  <div
+                    className="realm-icon"
+                    style={{ backgroundPosition: `${col * 20}% ${row * 50}%` }}
+                    role="img"
+                    aria-label={`Minh họa cảnh giới ${realm}`}
+                  />
+                  <span className="mt-4 block text-[10px] font-semibold tracking-[.22em] text-[#ad4b3e]/60">
+                    CẢNH {String(i + 1).padStart(2, '0')}
+                  </span>
+                  <h3 className="mt-1 min-h-12 font-serif text-xl font-semibold leading-tight text-[#2d463d]">
+                    {realm}
+                  </h3>
+                </li>
+              );
+            })}
           </ol>
         </div>
       </section>
 
-      <section className="relative border-y border-[#b99c58]/20 bg-[#b59a57] px-5 py-24 text-[#0b1412] lg:px-10">
-        <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-9 lg:flex-row lg:items-center">
+      <section className="cta-band px-5 py-20 lg:px-10">
+        <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-8 lg:flex-row lg:items-center">
           <div>
-            <p className="text-xs uppercase tracking-[0.4em] opacity-65">
+            <p className="text-xs uppercase tracking-[0.38em] text-[#944137]">
               Đại đạo đang chờ
             </p>
-            <h2 className="mt-3 font-serif text-5xl sm:text-7xl">
-              Nhập thế. Vấn thiên.
+            <h2 className="mt-3 font-serif text-5xl text-[#273f36] sm:text-7xl">
+              Nhập thế. Chọn đạo.
             </h2>
           </div>
           <div className="flex w-full flex-col gap-3 sm:w-auto sm:flex-row">
             <a
               className={cn(
                 buttonVariants({ size: 'lg' }),
-                'h-14 rounded-none bg-[#0a1513] px-7 text-[#f0e4c4] hover:bg-[#142622]',
+                'h-14 rounded-full bg-[#ae4437] px-7 text-white hover:bg-[#92372d]',
               )}
               href={GAME_DOWNLOADS.android.url}
               download
             >
               <Download />
-              Tải cho Android
+              Tải Android
             </a>
             <a
               className={cn(
-                buttonVariants({ size: 'lg', variant: 'outline' }),
-                'h-14 rounded-none border-[#0a1513]/45 bg-transparent px-7 text-[#0a1513] hover:bg-[#0a1513]/10',
+                buttonVariants({ size: 'lg' }),
+                'zalo-button h-14 rounded-full px-7',
               )}
-              href={GAME_DOWNLOADS.ios.url}
+              href={ZALO_URL}
               target="_blank"
               rel="noreferrer"
             >
-              <Apple />
-              TestFlight <ArrowUpRight />
+              <MessageCircle />
+              Chat Zalo <ArrowUpRight />
             </a>
           </div>
         </div>
       </section>
 
-      <footer className="bg-[#050b0a] px-5 py-12 lg:px-10">
+      <footer className="bg-[#263f36] px-5 py-12 text-[#f2ead8] lg:px-10">
         <div className="mx-auto flex max-w-7xl flex-col gap-7 sm:flex-row sm:items-center sm:justify-between">
           <div className="flex items-center gap-3">
-            <span className="grid size-9 place-items-center rounded-full border border-[#d8b975]/25 font-serif text-[#d7bd76]">
-              天
+            <span className="grid size-9 place-items-center rounded-full border border-[#eed9a4]/40 font-serif text-[#eed9a4]">
+              魔
             </span>
-            <span className="font-serif tracking-[.18em] text-[#e7dcc0]">
-              VẤN THIÊN
-            </span>
+            <span className="font-serif tracking-[.16em]">THIÊN MA ĐẠO</span>
           </div>
-          <p className="text-xs text-[#8f8c80]/55">
-            © 2026 Vấn Thiên. Đang trong giai đoạn thử nghiệm.
+          <p className="text-xs text-[#e3dac5]/60">
+            © 2026 Thiên Ma Đạo · Đang trong giai đoạn thử nghiệm
           </p>
           <a
             href="#top"
-            className="flex items-center gap-2 text-xs uppercase tracking-[.2em] text-[#ba9f5a]"
+            className="flex items-center gap-2 text-xs uppercase tracking-[.2em] text-[#eed9a4]"
           >
             Về đầu trang <ChevronDown className="size-4 rotate-180" />
           </a>
