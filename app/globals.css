@@ -418,7 +418,9 @@ body {
     padding: 0.75rem;
   }
   .path-card {
-    min-height: 56rem;
+    display: flex;
+    min-height: 0;
+    flex-direction: column;
     border-radius: 1.5rem;
   }
   .path-copy {
@@ -427,10 +429,15 @@ body {
   }
   .path-character,
   .path-character-demon {
-    right: 3%;
-    bottom: -1%;
-    width: 94%;
-    height: 57%;
+    position: relative;
+    right: auto;
+    bottom: auto;
+    width: 100%;
+    height: clamp(31rem, 142vw, 43rem);
+    margin-top: -0.75rem;
+  }
+  .path-character img {
+    object-position: center top;
   }
 }
 @media (prefers-reduced-motion: reduce) {
