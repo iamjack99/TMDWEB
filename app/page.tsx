@@ -17,6 +17,7 @@ import {
 import { buttonVariants } from '@/components/ui/button';
 import { GAME_DOWNLOADS } from '@/lib/game-config';
 import { cn } from '@/lib/utils';
+import { FlyingGiftDog } from '@/components/flying-gift-dog';
 
 const ZALO_URL = 'https://zalo.me/g/mwdtaq765';
 
@@ -77,6 +78,7 @@ const realms = [
 export default function Home() {
   return (
     <main className="min-h-screen overflow-hidden bg-background text-foreground">
+      <FlyingGiftDog />
       <section className="hero relative isolate flex min-h-screen flex-col">
         <Image
           src="/images/thien-ma-dao-hero.png"
