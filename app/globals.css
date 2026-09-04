@@ -377,6 +377,12 @@ body {
   z-index: 4;
   width: 63%;
   padding: 2.25rem 0 2rem 2.25rem;
+  text-shadow:
+    -1px -1px 0 rgba(255, 255, 255, 0.92),
+    1px -1px 0 rgba(255, 255, 255, 0.92),
+    -1px 1px 0 rgba(255, 255, 255, 0.92),
+    1px 1px 0 rgba(255, 255, 255, 0.92),
+    0 2px 5px rgba(255, 255, 255, 0.68);
 }
 .path-eyebrow {
   display: flex;
@@ -393,10 +399,9 @@ body {
   font-family: var(--font-display), serif;
   font-size: 1.25rem;
 }
-.path-eyebrow p {
-  font-size: 0.67rem;
-  font-weight: 600;
-  letter-spacing: 0.3em;
+.path-faction-title {
+  flex: none;
+  filter: drop-shadow(0 1px 1px rgba(255, 255, 255, 0.95));
 }
 .path-card h3 {
   margin-top: 1.5rem;
@@ -409,7 +414,7 @@ body {
   margin-top: 1.25rem;
   font-size: 0.875rem;
   line-height: 1.75;
-  opacity: 0.78;
+  opacity: 0.94;
 }
 .path-traits {
   display: grid;
@@ -433,7 +438,7 @@ body {
   margin-top: 1.4rem;
   font-size: 0.7rem;
   letter-spacing: 0.04em;
-  opacity: 0.72;
+  opacity: 0.92;
 }
 .path-role strong {
   font-weight: 600;

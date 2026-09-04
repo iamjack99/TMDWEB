@@ -269,7 +269,14 @@ export default function Home() {
             <div className="path-copy">
               <div className="path-eyebrow">
                 <span>仙</span>
-                <p>TIÊN TU · PHONG HỆ</p>
+                <Image
+                  src="/images/tien-tu-calligraphy.webp"
+                  alt="Tiên Tu"
+                  width={800}
+                  height={291}
+                  sizes="150px"
+                  className="path-faction-title h-auto w-[9.5rem]"
+                />
               </div>
               <h3>Thân pháp tựa lưu vân</h3>
               <p className="path-description">
@@ -309,7 +316,14 @@ export default function Home() {
             <div className="path-copy">
               <div className="path-eyebrow">
                 <span>魔</span>
-                <p>MA TU · HỎA HỆ</p>
+                <Image
+                  src="/images/ma-tu-calligraphy.webp"
+                  alt="Ma Tu"
+                  width={800}
+                  height={400}
+                  sizes="140px"
+                  className="path-faction-title h-auto w-[8.75rem]"
+                />
               </div>
               <h3>Ma diễm phá càn khôn</h3>
               <p className="path-description">
