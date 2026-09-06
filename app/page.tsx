@@ -123,7 +123,7 @@ export default function Home() {
             />
           </a>
           <nav
-            className="hidden items-center gap-9 text-sm text-[#375047]/75 md:flex"
+            className="hidden items-center gap-9 font-serif text-base text-[#375047]/75 md:flex"
             aria-label="Điều hướng chính"
           >
             <a className="nav-link" href="#gioi-thieu">
@@ -152,7 +152,7 @@ export default function Home() {
             >
               <Menu className="size-6" />
             </summary>
-            <nav className="absolute right-0 top-12 flex w-48 flex-col rounded-2xl border border-[#b69a62]/25 bg-[#fffaf0]/95 p-3 shadow-xl backdrop-blur">
+            <nav className="absolute right-0 top-12 flex w-48 flex-col rounded-2xl border border-[#b69a62]/25 bg-[#fffaf0]/95 p-3 font-serif text-base shadow-xl backdrop-blur">
               <a className="px-3 py-3" href="#gioi-thieu">
                 Tiên ma
               </a>
@@ -369,7 +369,7 @@ export default function Home() {
           <div className="flex flex-col justify-between gap-5 sm:flex-row sm:items-end">
             <div>
               <p className="section-kicker">Lục đại đặc sắc</p>
-              <h2 className="mt-3 font-serif text-4xl text-[#263f36] sm:text-6xl">
+              <h2 className="mt-3 font-serif text-4xl text-black sm:text-6xl">
                 Mỗi kiếp, một truyền kỳ
               </h2>
             </div>
@@ -409,7 +409,7 @@ export default function Home() {
         <div className="mx-auto max-w-7xl">
           <div className="mx-auto max-w-3xl text-center">
             <p className="section-kicker">Thập bát cảnh giới</p>
-            <h2 className="mt-4 font-serif text-4xl text-[#263f36] sm:text-6xl">
+            <h2 className="mt-4 font-serif text-4xl text-black sm:text-6xl">
               Từ một hơi thở phàm trần
               <br />
               đến Hỗn Nguyên đại đạo
@@ -434,7 +434,7 @@ export default function Home() {
                   <span className="mt-4 block text-[10px] font-semibold tracking-[.22em] text-[#ad4b3e]/60">
                     CẢNH {String(i + 1).padStart(2, '0')}
                   </span>
-                  <h3 className="mt-1 min-h-12 font-serif text-xl font-semibold leading-tight text-[#2d463d]">
+                  <h3 className="mt-1 min-h-12 font-serif text-xl font-semibold leading-tight text-black">
                     {realm}
                   </h3>
                 </li>
@@ -450,7 +450,7 @@ export default function Home() {
             <p className="text-xs uppercase tracking-[0.38em] text-[#944137]">
               Đại đạo đang chờ
             </p>
-            <h2 className="mt-3 font-serif text-5xl text-[#273f36] sm:text-7xl">
+            <h2 className="mt-3 font-serif text-5xl text-black sm:text-7xl">
               Nhập thế. Chọn đạo.
             </h2>
           </div>
