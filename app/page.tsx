@@ -18,6 +18,7 @@ import { buttonVariants } from '@/components/ui/button';
 import { GAME_DOWNLOADS } from '@/lib/game-config';
 import { cn } from '@/lib/utils';
 import { FlyingGiftDog } from '@/components/flying-gift-dog';
+import { RealmGrid } from '@/components/realm-grid';
 
 const ZALO_URL = 'https://zalo.me/g/mwdtaq765';
 
@@ -54,26 +55,7 @@ const features = [
   },
 ];
 
-const realms = [
-  'Luyện Khí',
-  'Trúc Cơ',
-  'Kết Đan',
-  'Nguyên Anh',
-  'Hóa Thần',
-  'Luyện Hư',
-  'Hợp Thể',
-  'Đại Thừa',
-  'Độ Kiếp',
-  'Chân Tiên',
-  'Địa Tiên',
-  'Thiên Tiên',
-  'Huyền Tiên',
-  'Kim Tiên',
-  'Thái Ất Kim Tiên',
-  'Đại La Kim Tiên',
-  'Đạo Nguyên',
-  'Hỗn Nguyên',
-];
+
 
 export default function Home() {
   return (
@@ -419,28 +401,7 @@ export default function Home() {
               hạn của chính mình.
             </p>
           </div>
-          <ol className="mt-16 grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6">
-            {realms.map((realm, i) => {
-              const col = i % 6;
-              const row = Math.floor(i / 6);
-              return (
-                <li key={realm} className="realm-card">
-                  <div
-                    className="realm-icon"
-                    style={{ backgroundPosition: `${col * 20}% ${row * 50}%` }}
-                    role="img"
-                    aria-label={`Minh họa cảnh giới ${realm}`}
-                  />
-                  <span className="mt-4 block text-[10px] font-semibold tracking-[.22em] text-[#ad4b3e]/60">
-                    CẢNH {String(i + 1).padStart(2, '0')}
-                  </span>
-                  <h3 className="mt-1 min-h-12 font-serif text-xl font-semibold leading-tight text-black">
-                    {realm}
-                  </h3>
-                </li>
-              );
-            })}
-          </ol>
+          <RealmGrid />
         </div>
       </section>
 
