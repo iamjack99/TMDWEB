@@ -7,7 +7,7 @@ export const GAME_DOWNLOADS = {
   version: '0.1 Alpha',
   android: {
     platform: 'android',
-    url: 'https://github.com/iamjack99/TMDWEB/releases/download/v0.1-alpha/TMD_19Sep.apk',
+    url: 'https://github.com/iamjack99/TMDWEB/releases/download/v0.1-alpha/TMD.apk',
     external: true,
   },
   ios: {
